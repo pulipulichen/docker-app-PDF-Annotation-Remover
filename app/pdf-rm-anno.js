@@ -14,7 +14,7 @@ let main = async function () {
     let dirname = path.dirname(file)
     let filenameNoExt = path.parse(filename).name
     let ext = path.extname(filename)
-    if (ext !== '.pdf') {
+    if (ext !== '.pdf' || filename.endsWith('-clean.pdf')) {
       continue
     }
 
