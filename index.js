@@ -7,7 +7,29 @@ const SetDockerComposeYML = require('./app/lib/SetDockerComposeYML')
 const fs = require('fs')
 const path = require('path')
 
+const lockFile = path.resolve(__dirname, '.lock')
+let lock = function () {
+	fs.writeFileSync(lockFile, (new Date().toString()))
+}
+
+let isLocked = function () {
+	return fs.existsSync(lockFile)
+}
+
+let unlock = function () {
+	fs.unlinkSync(lockFile)
+}
+
+function sleep(ms = 500) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 let main = async function () {
+	while (isLocked()) {
+		await sleep()
+	}
+	lock()
+
   // 1. 先取得輸入檔案的列表
   let files = GetExistedArgv()
 
@@ -40,6 +62,8 @@ let main = async function () {
 		// 	fs.renameSync(path.resolve(dirname, tempFilename.slice(0, -4)) + '.pdf', path.resolve(dirname, filename.slice(0, -4)) + '.pdf')
 		// }
   }
+
+	unlock()
 
 }
 
