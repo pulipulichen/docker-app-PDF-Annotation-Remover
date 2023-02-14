@@ -70,6 +70,7 @@ cp "/tmp/${PROJECT_NAME}/package.json" "/tmp/${PROJECT_NAME}.cache/"
 
 if [ "${useParams}" == "true" ]; then
   # echo "use parameters"
+  rm -f "/tmp/${PROJECT_NAME}/.lock"
   for var in "$@"
   do
     cd "${WORK_DIR}"
@@ -77,7 +78,6 @@ if [ "${useParams}" == "true" ]; then
     # echo "${var}" >> /tmp/1.txt
     cd "/tmp/${PROJECT_NAME}"
     node "/tmp/${PROJECT_NAME}/index.js" "${var}"
-    wait
   done
 else
   if [ ! -f "${var}" ]; then
