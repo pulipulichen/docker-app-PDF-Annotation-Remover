@@ -20,7 +20,7 @@ let main = async function () {
 
 
     let cleanPDFfile = dirname + '/' + filenameNoExt + '-clean.pdf'
-    await ShellExec(`pdftk "${file}" output - uncompress | sed '/^\/Annots/d' | pdftk - output "${cleanPDFfile}" compress`)
+    await ShellExec(`pdftk "${file}" output - uncompress | sed '/^\\/Annots/d' | pdftk - output "${cleanPDFfile}" compress`)
   }
 }
 
