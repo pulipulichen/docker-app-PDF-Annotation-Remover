@@ -70,16 +70,15 @@ cp "/tmp/${PROJECT_NAME}/package.json" "/tmp/${PROJECT_NAME}.cache/"
 
 if [ "${useParams}" == "true" ]; then
   # echo "use parameters"
-  # vars=
-  # for var in "$@"
-  # do
-  #   cd "${WORK_DIR}"
-  #   var=`realpath "${var}"`
-  #   # echo "${var}" >> /tmp/1.txt
-  #   cd "/tmp/${PROJECT_NAME}"
-  #   vars="$vars \"${var//\"/\\\"}\""
-  # done
-  node "/tmp/${PROJECT_NAME}/index.js" "${@}"
+  for var in "$@"
+  do
+    cd "${WORK_DIR}"
+    var=`realpath "${var}"`
+    # echo "${var}" >> /tmp/1.txt
+    cd "/tmp/${PROJECT_NAME}"
+    node "/tmp/${PROJECT_NAME}/index.js" "${var}"
+    wait
+  done
 else
   if [ ! -f "${var}" ]; then
     echo "$var does not exist."
