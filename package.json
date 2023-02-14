@@ -1,0 +1,30 @@
+{
+  "name": "docker-app-PDF-remove-Annotations",
+  "version": "1.0.0",
+  "description": "Trim an image.",
+  "main": "index.js",
+  "scripts": {
+    "start": "git add .; git commit -m \"ok\"; git push; /home/pudding/NetBeansProjects/MicroSD-NetBeansProjects/docker-app/docker-app-PDF-remove-Annotations/test/20230105-2123.sh",
+    "d0.build": "docker-compose build",
+    "d1.bash": "docker-compose run app bash",
+    "d2.up": "docker-compose up",
+    "update": "node update.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-PDF-remove-Annotations.git"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "Pulipuli Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/docker-app-PDF-remove-Annotations/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/docker-app-PDF-remove-Annotations#readme",
+  "dependencies": {
+    "jquery": "3.6.3",
+    "jsdom": "21.1.0"
+  }
+}

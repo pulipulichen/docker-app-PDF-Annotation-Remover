@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build: .
+    tty: true
+    command: node /app/pdf-rm-anno.js "/input/資組.zip"
+    volumes: 
+      - ./app:/app/
+      - ./cache:/cache/
+      - ./example folder:/input/
