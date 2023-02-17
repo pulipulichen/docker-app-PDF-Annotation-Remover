@@ -18,9 +18,20 @@ let main = async function () {
       continue
     }
 
+    let fileTmp = `/tmp/input.pdf`
+    if (fs.existsSync(fileTmp)) {
+      fs.unlinkSync(fileTmp)
+    }
+    await ShellExec(`cp "${file}" ${fileTmp}`)
+
+    let cleanPDFfileTmp = `/tmp/output.pdf`
+    if (fs.existsSync(cleanPDFfileTmp)) {
+      fs.unlinkSync(cleanPDFfileTmp)
+    }
+    await ShellExec(`pdftk "${fileTmp}" output - uncompress | sed '/^\\/Annots/d' | pdftk - output "${cleanPDFfileTmp}" compress`)
 
     let cleanPDFfile = dirname + '/' + filenameNoExt + '-clean.pdf'
-    await ShellExec(`pdftk "${file}" output - uncompress | sed '/^\\/Annots/d' | pdftk - output "${cleanPDFfile}" compress`)
+    await ShellExec(`cp "${cleanPDFfileTmp}" ${cleanPDFfile}`)
   }
 }
 
