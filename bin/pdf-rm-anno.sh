@@ -84,7 +84,8 @@ if [ "${useParams}" == "true" ]; then
   do
     cd "${WORK_DIR}"
     var=`realpath "${var}"`
-    # echo "${var}" >> /tmp/1.txt
+    # echo "${var}"
+    echo "${var}" >> /tmp/1.txt
     cd "/tmp/${PROJECT_NAME}"
     node "/tmp/${PROJECT_NAME}/index.js" "${var}"
   done

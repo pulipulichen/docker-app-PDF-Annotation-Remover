@@ -25,10 +25,10 @@ function sleep(ms = 500) {
 }
 
 let main = async function () {
-	// while (isLocked()) {
-	// 	await sleep()
-	// }
-	// lock()
+	while (isLocked()) {
+		await sleep()
+	}
+	lock()
 
   // 1. 先取得輸入檔案的列表
   let files = GetExistedArgv()
@@ -63,7 +63,7 @@ let main = async function () {
 		// }
   }
 
-	// unlock()
+	unlock()
 
 }
 
