@@ -16,9 +16,15 @@
     "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-PDF-remove-Annotations.git"
   },
   "keywords": [
-    "PWA"
+    "Docker-APP",
+    "PDF"
   ],
-  "author": "Pulipuli Chen",
+  "author": {
+    "name": "Yung-Ting Chen",
+    "email": "blog@pulipuli.info",
+    "orcid": "https://orcid.org/0000-0003-3751-610X",
+    "url": "https://blog.pulipuli.info"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pulipulichen/docker-app-PDF-remove-Annotations/issues"
