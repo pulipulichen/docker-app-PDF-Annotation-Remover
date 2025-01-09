@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_NAME=docker-app-PDF-remove-Annotations
+PROJECT_NAME=docker-app-PDF-Annotations-Remover
 
 # =================================================================
 
