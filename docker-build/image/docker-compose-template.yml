@@ -1,11 +1,11 @@
 version: "3"
 services:
   app:
-    image: pudding/docker-app:docker-app-pdf-annotations-remover-app-20250109.144341
+    image: pudding/docker-app:docker-app-pdf-annotations-remover-app-20250109.144418
     tty: true
     command: node /app/index.js "/input/__INPUT__"
     environment:
-      - CONTAINER_NAME=docker-app-pdf-annotations-remover
+      - CONTAINER_NAME=docker-app-pdf-annotations-remover-app
       - LOCAL_VOLUMN_PATH=/input/
       - RUN_COMMAND=node /app/index.js
     volumes: 
