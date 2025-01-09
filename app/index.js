@@ -5,7 +5,14 @@ const GetExistedArgv = require('./lib/GetExistedArgv')
 const path = require('path')
 const fs = require('fs')
 
+const isColab = require('./lib/isColab')
+
 let main = async function () {
+
+  if (isColab) {
+    await ShellSpawn(`rm -rf /output/*`)
+  }
+
   let files = GetExistedArgv()
   for (let i = 0; i < files.length; i++) {
     let file = files[i]
