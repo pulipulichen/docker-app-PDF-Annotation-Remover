@@ -19,7 +19,7 @@ https://colab.research.google.com/github/pulipulichen/docker-app-PDF-Annotation-
 
 # Blog
 
-@TODO
+https://blog.pulipuli.info/2025/05/removing-annotations-from-pdfs-pdf-annotation-remover.html
 
 # Key Technologies
 
@@ -29,4 +29,4 @@ https://colab.research.google.com/github/pulipulichen/docker-app-PDF-Annotation-
 
 # Citation
 
-@TODO
+Chen, Y.-T. (2025). *Docker-app-PDF-Annotation-Remover* (Version 20250109.152443) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.14619584](https://doi.org/10.5281/ZENODO.14619584)
