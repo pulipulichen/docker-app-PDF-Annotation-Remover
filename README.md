@@ -1,5 +1,3 @@
-@TODO: DOI
-
 # docker-app-PDF-Annotation-Remover: 移除PDF檔案中的註釋。
 
 這個工具會移除PDF檔案中的所有註釋，例如螢光筆、重點、筆記、圖章等等，讓您得到一個乾淨的PDF檔案。輸入的資料為含有註釋的PDF檔案，輸出的資料為移除註釋後的PDF檔案。
@@ -12,7 +10,6 @@ This tool removes all annotations from a PDF file, such as highlights, underline
 
 - For Windows: https://pulipulichen.github.io/docker-app-PDF-remove-Annotation/bin/pdf-rm-anno.exe
 - For Linux and Mac OS: https://pulipulichen.github.io/docker-app-PDF-remove-Annotation/bin/pdf-rm-anno.sh
-
 
 # Online Tool
 
