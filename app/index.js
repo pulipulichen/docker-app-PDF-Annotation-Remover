@@ -1,6 +1,6 @@
 const ShellSpawn = require('./lib/ShellSpawn')
 const ShellExec = require('./lib/ShellExec')
-const GetExistedArgv = require('./lib/GetExistedArgv')
+const GetFiles = require('./lib/GetFiles')
 
 const path = require('path')
 const fs = require('fs')
@@ -13,7 +13,7 @@ let main = async function () {
     await ShellSpawn(`rm -rf /output/*`)
   }
 
-  let files = GetExistedArgv()
+  let files = GetFiles()
   for (let i = 0; i < files.length; i++) {
     let file = files[i]
     
