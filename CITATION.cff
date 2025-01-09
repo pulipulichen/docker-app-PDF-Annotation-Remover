@@ -9,3 +9,6 @@ title: "docker-app-PDF-Annotation-Remover"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/docker-app-PDF-Annotation-Remover"
 abstract: "Remove annotation from PDF files."
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14619584
